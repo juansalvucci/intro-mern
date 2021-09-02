@@ -1,5 +1,6 @@
 const config = {
     appConfig: {
+        host: process.env.DB_HOST,
         port: process.env.APP_PORT
     },
     dbConfig: {

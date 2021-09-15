@@ -17,8 +17,7 @@ const ProductLayout = () => {
 
         if (response.status === 200) {
             setProducts(response.data.products)
-        }   
-        
+        }           
         setIsLoading(false)
     }   
 
@@ -45,16 +44,16 @@ const ProductLayout = () => {
             }
 
             { 
-                !isLoading && products.length && (<ListProducts products={products}/> )
+                !isLoading && products.length > 0 && (<ListProducts products={products}/> )
             }             
 
             <Modal show={isModalOpen} onCLose={() => setIsModalOpen(false)}>
                 <Modal.Card>
-                    <Modal.Card.Head showClose={false}>
+                    <Modal.Card.Header showClose={false}>
                         <Modal.Card.Title>
                             Add Product
                         </Modal.Card.Title>                    
-                    </Modal.Card.Head>
+                    </Modal.Card.Header>
                     <Modal.Card.Body>
                         <Form handleSubmit={handleSubmit} />
                     </Modal.Card.Body>

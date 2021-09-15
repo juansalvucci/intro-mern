@@ -37,7 +37,7 @@ const Form = ({ handleSubmit }) => {
                 </Control>
             </Field>  
             <Field>
-                <Label>UnitaryPrice</Label>
+                <Label>Unitary Price</Label>
                 <Control>
                     <Input
                         placeholder="Text input"
